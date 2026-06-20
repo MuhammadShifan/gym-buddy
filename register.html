@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM BUDDY - Central Enquiry Portal</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        /* Pure Black and Red Gradient Background */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Subtle dark red radial glow from the center */
+            background: radial-gradient(circle, #1a0202 0%, #050000 70%, #000000 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Red glow text modifier */
+        .glow-text {
+            color: #ff0000;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+        }
+
+        /* Container Structure */
+        .enquiry-wrapper {
+            width: 90%;
+            max-width: 440px;
+            text-align: center;
+        }
+
+        /* Medium Size Logo above the Form Box */
+        .form-logo {
+            width: 130px; /* Perfect medium size */
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ff0000;
+            margin-bottom: -65px; /* Pulls logo halfway over the form border */
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            background-color: #0a0a0a;
+        }
+
+        /* Glassmorphic Transparent Form Box */
+        .enquiry-container {
+            background-color: rgba(15, 15, 15, 0.75); /* High transparency clean dark look */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 90px 35px 40px 35px; /* Top padding increased to make space for the logo */
+            border-radius: 16px;
+            border: 2px solid rgba(255, 0, 0, 0.3); /* Premium red border outline */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 0, 0, 0.15);
+        }
+
+        .enquiry-container h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        /* Input Controls */
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(30, 30, 30, 0.6);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        .form-control::placeholder {
+            color: #888;
+        }
+
+        /* Dropdown custom styling arrow */
+        select.form-control {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ff0000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%2E');
+            background-repeat: no-repeat;
+            background-position: right 16px top 53%;
+            background-size: 11px auto;
+            padding-right: 40px;
+            cursor: pointer;
+        }
+
+        select.form-control option {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+            background-color: rgba(40, 40, 40, 0.8);
+        }
+
+        /* Solid Red Glowing Button */
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #fff;
+            color: #ff0000;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="enquiry-wrapper">
+        <img src="logo.png" alt="GYM BUDDY Logo" class="form-logo">
+
+        <div class="enquiry-container">
+            <h2>QUICK <span class="glow-text">ENQUIRY</span></h2>
+            
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <select id="gender" name="gender" class="form-control" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="contact" name="contact" class="form-control" placeholder="Contact Number" required>
+                </div>
+
+                <button type="submit" class="submit-btn">SUBMIT DETAILS</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>

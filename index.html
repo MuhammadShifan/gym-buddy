@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM BUDDY - Unleash Your Beast</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="GYM BUDDY Logo" class="logo-img">
+            GYM <span>BUDDY</span>
+        </a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fas fa-bars"></label>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#plans">Workout Plans</a>
+            <a href="#trainers">Trainers</a>
+            <a href="#bmi">BMI Calculator</a>
+            <a href="register.html" class="btn-nav">Join Now</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h3>No Excuses. No Limits.</h3>
+            <h1>Unleash Your <span>Inner Beast</span></h1>
+            <p>Transform your ambition into reality. With our expert guidance, customized workout regimes, and elite training facilities, your peak physical form is just a commitment away. Start your ultimate fitness journey today!</p>
+            <a href="register.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="plans-section" id="plans">
+        <h2 class="heading">Our <span>Workout Plans</span></h2>
+        <div class="table-container">
+            <table class="plans-table">
+                <thead>
+                    <tr>
+                        <th>Plan Type</th>
+                        <th>Focus Area</th>
+                        <th>Access level</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Beginner Routine</strong></td>
+                        <td>Full Body Conditioning</td>
+                        <td>Gym Floor Only</td>
+                        <td>₹299 / mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Strength & Muscle</strong></td>
+                        <td>Hypertrophy & Power</td>
+                        <td>Gym + Free Weights</td>
+                        <td>₹999 / mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cardio Shred</strong></td>
+                        <td>Fat Loss & Endurance</td>
+                        <td>Cardio Zone + Sauna + Gym + Free Weights</td>
+                        <td>₹1,199 / mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VIP Elite</strong></td>
+                        <td>Custom Programming</td>
+                        <td>All Access + Personal Trainer</td>
+                        <td>₹2,999 / mo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="trainers-section" id="trainers">
+        <h2 class="heading">Meet Our <span>Expert Trainers</span></h2>
+        <div class="trainers-grid">
+            <div class="trainer-card">
+                <div class="loki">
+                    <img src="loki.jpeg" alt="">
+                </div>
+                <div class="trainer-img">
+                    <i class="fas fa-user-ninja"></i>
+                </div>
+                <h3>Loki</h3>
+                <p>Strength & Conditioning Specialist</p>
+            </div>
+            <div class="trainer-card">
+                <div class="kavya">
+                    <img src="Kavya Suha.jpeg" alt="">
+                </div>
+                <div class="trainer-img">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Kavya Suha</h3>
+                <p>Cardio & High-Intensity Coach</p>
+            </div>
+            <div class="trainer-card">
+                <div class="shravan">
+                    <img src="Shravan H Rajani.jpeg" alt="">
+                </div>
+                <div class="trainer-img">
+                    <i class="fas fa-heart-pulse"></i>
+                </div>
+                <h3>Shravan H Rajani</h3>
+                <p>Bodybuilding & Nutrition Expert</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bmi-section" id="bmi">
+        <h2 class="heading">Calculate Your <span>BMI</span></h2>
+        <div class="bmi-container">
+            <div class="bmi-box">
+                <p>Check your Body Mass Index (BMI) easily. Enter your details below:</p>
+                <form id="bmiForm">
+                    <div class="input-box">
+                        <input type="number" placeholder="Weight (in kg)" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Height (in cm)" required>
+                    </div>
+                    <button class="btn" type="button">Calculate Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

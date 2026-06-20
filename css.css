@@ -1,0 +1,439 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+/* Red & Black Theme Styling */
+span {
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 3rem 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.btn {
+    display: inline-block;
+    background: #ff0000;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Header & Navigation with Logo integration */
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    border-bottom: 2px solid #ff0000;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.15);
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .logo-img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ff0000;
+}
+
+.header .navbar a {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.header .navbar a:hover {
+    color: #ff0000;
+}
+
+.header .navbar .btn-nav {
+    background: #ff0000;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.header .navbar .btn-nav:hover {
+    background: #fff;
+    color: #ff0000;
+}
+
+#menu-bar {
+    display: none;
+}
+
+.header label {
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+
+
+/* Workout Plans Table */
+.plans-section {
+    padding: 2rem 7%;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.plans-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+
+.plans-table th, .plans-table td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #222;
+}
+
+.plans-table th {
+    background: #ff0000;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.plans-table tbody tr:hover {
+    background: #1a1a1a;
+    border-left: 4px solid #ff0000;
+}
+
+/* Trainers Grid Layout */
+.trainers-section {
+    padding: 2rem 7%;
+    background: #111;
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.trainer-card {
+    background: #161616;
+    border: 1px solid #222;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.trainer-card:hover {
+    border-color: #ff0000;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.2);
+}
+
+.trainer-img {
+    font-size: 4rem;
+    color: #ff0000;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.4));
+}
+
+.trainer-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.trainer-card p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* BMI Calculator Section */
+.bmi-section {
+    padding: 2rem 7%;
+}
+
+.bmi-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.bmi-box {
+    background: #111;
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid #222;
+}
+
+.bmi-box p {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.bmi-box .input-box input {
+    width: 100%;
+    padding: 1rem;
+    background: #1a1a1a;
+    color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #333;
+}
+
+.bmi-box .input-box input:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+}
+
+/* Membership Form Section */
+.membership-section {
+    padding: 2rem 7% 5rem;
+    background: #111;
+}
+
+.form-container {
+    background: #161616;
+    padding: 3rem;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 1rem auto 0;
+    border: 1px solid #222;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-box {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    margin-bottom: 0.5rem;
+    color: #aaa;
+}
+
+.input-box input, .input-box select {
+    padding: 1rem;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #333;
+}
+
+.input-box input:focus, .input-box select:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+}
+
+.input-box select option {
+    background: #161616;
+}
+
+/* Footer */
+.footer {
+    background: #0a0a0a;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #222;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Styling for loki */
+.loki {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.loki img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling for Kavya Suha  */
+.kavya {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.kavya img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling for Sharavan */
+.shravan {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+.shravan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 991px) {
+    html {
+        font-size: 15px;
+    }
+    .header {
+        padding: 1rem 4%;
+    }
+    .hero, .plans-section, .trainers-section, .bmi-section, .membership-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header label {
+        display: block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #111;
+        border-top: 1px solid #222;
+        display: none;
+    }
+    .header .navbar a {
+        display: block;
+        margin: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .header .navbar .btn-nav {
+        display: inline-block;
+        margin-top: 0;
+    }
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 14px;
+    }
+    .form-container {
+        padding: 1.5rem;
+    }
+}
